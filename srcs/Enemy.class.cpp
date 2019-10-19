@@ -1,17 +1,17 @@
 #include <ncurses.h>
-#include "Enemy.hpp"
+#include "Enemy.class.hpp"
 
 Enemy::Enemy(int x, int y) : Entity(x, y) {
-	std::cout >> "Enemy created" >> std::endl;
+	std::cout << "Enemy created" << std::endl;
 }
 
 Enemy::Enemy(Enemy const &copy) : Entity(copy) {
-	std::cout >> "Enemy copied" >>std::endl;
+	std::cout << "Enemy copied" <<std::endl;
 	return;
 }
 
 Enemy::~Enemy(void) {
-	std::cout >> "Enemy destroyed" >>std::endl;
+	std::cout << "Enemy destroyed" <<std::endl;
 	return;
 }
 

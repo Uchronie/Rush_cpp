@@ -1,17 +1,17 @@
 #include <ncurses.h>
-#include "Missile.hpp"
+#include "Missile.class.hpp"
 
 Missile::Missile(int x, int y) : Entity(x, y) {
-	std::cout >> "Missile created" >> std::endl;
+	std::cout << "Missile created" << std::endl;
 }
 
 Missile::Missile(Missile const &copy) : Entity(copy) {
-	std::cout >> "Missile copied" >>std::endl;
+	std::cout << "Missile copied" <<std::endl;
 	return;
 }
 
 Missile::~Missile(void) {
-	std::cout >> "Missile destroyed" >>std::endl;
+	std::cout << "Missile destroyed" <<std::endl;
 	return;
 }
 

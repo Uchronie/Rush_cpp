@@ -1,8 +1,8 @@
 #include <ncurses.h>
-#include "EnemyFleet.hpp"
+#include "EnemyFleet.class.hpp"
 
 EnemyFleet::EnemyFleet(int size) {
-	std::cout >> "EnemyFleet created" >> std::endl;
+	std::cout << "EnemyFleet created" << std::endl;
 	this->enemyFleet = new Enemy[size];
 	for (int n = 0; n != size n++) {
 		this->enemyFleet[n].initialize(0, 0, 0, 0); //evidemment va falloir changer les valeurs
@@ -10,13 +10,13 @@ EnemyFleet::EnemyFleet(int size) {
 }
 
 EnemyFleet::EnemyFleet(EnemyFleet const &copy) : Entity(copy) {
-	std::cout >> "EnemyFleet copied" >>std::endl;
+	std::cout << "EnemyFleet copied" << std::endl;
 	return;
 }
 
 EnemyFleet::~EnemyFleet(void) {
 	delete[] this->enemyFleet;
-	std::cout >> "EnemyFleet destroyed" >>std::endl;
+	std::cout << "EnemyFleet destroyed" << std::endl;
 	return;
 }
 
